@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rokid SDK · EverMe 记忆接入"
+  short_description: "为 Rokid SDK 眼镜端 Android 应用接入账号隔离的 EverMe OAuth MCP"
+  default_prompt: "使用 $rokid-sdk-everme，结合我的 Rokid SDK 眼镜端 Android 工程与后端，接入 EverMe 并验证可信浏览器授权、记忆读写和断开流程。"

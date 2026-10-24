@@ -1,0 +1,16 @@
+{
+  "source_repository": "EasonZhu1997/Eason-Agent-Skills",
+  "release_tag": "aiui-everos-sdk-v0.1.0",
+  "release_url": "https://github.com/EasonZhu1997/Eason-Agent-Skills/releases/tag/aiui-everos-sdk-v0.1.0",
+  "release_target_commit": "2b873fa661f3b6e714ee9c8bbda28a4f139200d3",
+  "validated_on": "2026-10-24",
+  "archives": {
+    "aiui-everos-sdk-v0.1.0.zip": "53eba00776b3b7da3a7b12458ac060b9724f7193caa3589f6c818153fe557c46",
+    "eason-aiui-everos-0.1.0.tgz": "80024e21142189189aa8f034efcd2c04707e03148faee44316a559f8d0f4bcc9",
+    "aiui-everos-direct.zip": "f4ba10d56e880d5b02b7894cf1950bbb0676d214a80c3382e4dfe21e63cb2046"
+  },
+  "sdk_files": {
+    "index.js": "84bf32e5c2439f17c03e24939b92aedff6ad6e692f1cdd79fb7c673dc842274b",
+    "index.d.ts": "c060aec63a5659be5456f04dc9e6a40dc72d4446437f5b558919636b34700553"
+  }
+}
