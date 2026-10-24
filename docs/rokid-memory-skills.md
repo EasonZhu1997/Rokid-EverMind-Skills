@@ -1,6 +1,6 @@
 # Rokid 开发者：两条长期记忆接入路线
 
-**简体中文** · [English](rokid-memory-skills.en.md) · [日本語](rokid-memory-skills.ja.md)
+**简体中文** · [English](rokid-memory-skills.en.md) · [日本語](rokid-memory-skills.ja.md) · [Français](rokid-memory-skills.fr.md)
 
 <p>
   <img src="assets/brand/rokid-logo-black-on-white.svg" height="64" alt="乐奇 Rokid 标准标志" />
@@ -265,7 +265,7 @@ Rokid SDK 调用示例：
   <img src="assets/brand/fun-pizza-logo.jpg" alt="FUN PIZZA 公司品牌标识" width="128" />
 </p>
 
-**产品案例与运营方：**运动大师（Sport Master）由<strong>上海方披萨软件科技有限公司 / Shanghai Fun Pizza Software Technology Co., Ltd.</strong>运营。下方以 AIUI Sport 的公开源码说明记忆接入位置。
+<strong>产品案例与运营方：</strong>运动大师（Sport Master）由<strong>上海方披萨软件科技有限公司 / Shanghai Fun Pizza Software Technology Co., Ltd.</strong>运营。下方以 AIUI Sport 的公开源码说明记忆接入位置。
 
 作者公开的源码案例 [AIUI-Sports-Agents](https://github.com/EasonZhu1997/AIUI-Sports-Agents) 提供跑步、骑行和室内划船三套 AIUI 应用。以跑步应用为例，可以从它已有的记忆接口边界理解 SDK 的接入位置：
 

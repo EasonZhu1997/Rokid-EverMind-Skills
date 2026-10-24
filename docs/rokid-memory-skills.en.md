@@ -1,6 +1,6 @@
 # Add long-term memory to Rokid apps
 
-[简体中文](rokid-memory-skills.md) · **English** · [日本語](rokid-memory-skills.ja.md)
+[简体中文](rokid-memory-skills.md) · **English** · [日本語](rokid-memory-skills.ja.md) · [Français](rokid-memory-skills.fr.md)
 
 <p>
   <img src="assets/brand/rokid-logo-black-on-white.svg" height="64" alt="Rokid standard logo" />

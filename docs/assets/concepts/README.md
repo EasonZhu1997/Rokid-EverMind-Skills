@@ -12,4 +12,4 @@ All were generated with built-in ImageGen using the blue-ink-paper-diagram style
 
 The actual Sport Master, FUN PIZZA, Rokid and EverMind logos are separate original brand assets. They were not redrawn or embedded by the image generator. See [brand provenance](../brand/README.md).
 
-[generation.json](generation.json) records selected files, prompts, dimensions, SHA-256 values and review scope. The output is not promised to be exclusive or exactly reproducible. The original 18 localized technical diagrams remain in [blue-ink](../blue-ink/README.md), with their own semantic sources and generation records.
+[generation.json](generation.json) records selected files, prompts, dimensions, SHA-256 values and review scope. The output is not promised to be exclusive or exactly reproducible. The 24 localized technical diagrams are maintained in [blue-ink](../blue-ink/README.md), with their own semantic sources and generation records.

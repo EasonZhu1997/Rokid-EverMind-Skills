@@ -14,12 +14,12 @@ Reusable memory integration for glasses developers.
 
 [<img src="docs/assets/badges/sdk.svg" height="22" alt="AIUI SDK v0.1.0" />](skills/aiui-everos-direct/sdk/README.md)
 [<img src="docs/assets/badges/checks.svg" height="22" alt="39 local SDK checks passed" />](docs/validation.md)
-[<img src="docs/assets/badges/guides.svg" height="22" alt="Chinese, English and Japanese guides" />](#图文文档)
+[<img src="docs/assets/badges/guides.svg" height="22" alt="Chinese, English, Japanese and French guides" />](#图文文档)
 [<img src="docs/assets/badges/license.svg" height="22" alt="Original code and docs: MIT" />](LICENSE)
 
 [快速开始](#快速开始) · [运动大师案例](#运动大师案例) · [验证记录](#验证记录) · [维护方](#维护方)
 
-**[简体中文](docs/rokid-memory-skills.md) · [English](docs/rokid-memory-skills.en.md) · [日本語](docs/rokid-memory-skills.ja.md)**
+**[简体中文](docs/rokid-memory-skills.md) · [English](docs/rokid-memory-skills.en.md) · [日本語](docs/rokid-memory-skills.ja.md) · [Français](docs/rokid-memory-skills.fr.md)**
 
 <img src="docs/assets/concepts/glasses-memory-hero-v1.png" width="100%" alt="AIUI JavaScript SDK 与 Rokid SDK Skill 两条路线的运动应用概念图；不是部署回执" />
 
@@ -48,7 +48,7 @@ Reusable memory integration for glasses developers.
 | --- | --- |
 | 一份 JavaScript 实现 | 统一 `add/search/flush/dispose`、响应解析、超时和 owner 检查，减少重复生成 HTTP client |
 | 两条接入路线 | AIUI 使用 EverOS HTTP API；Rokid SDK 应用通过自有后端接用户授权的 EverMe MCP |
-| 三语图文与公开源码 | 从路线、架构、授权和案例图进入实现，再用独立验收检查结果 |
+| 四语图文与公开源码 | 从路线、架构、授权和案例图进入实现，再用独立验收检查结果 |
 
 > [!NOTE]
 > AIUI Skill 是可选的开发指导；运行时调用的是 JavaScript SDK。Rokid SDK 路线提供实施 Skill，具体硬件 SDK 由开发者按目标设备选择。本仓库未提供通用 Android 二进制 SDK 或可直接安装的 APK。
@@ -192,11 +192,12 @@ EverOS 官方 README 已将 AIUI Sports Agents 列为使用场景，并说明接
 | [简体中文图解](docs/rokid-memory-skills.md) | 从路线、架构、授权时序、记忆流程到运动大师案例 |
 | [English illustrated guide](docs/rokid-memory-skills.en.md) | English-speaking developers integrating either route |
 | [日本語図解ガイド](docs/rokid-memory-skills.ja.md) | AIUI SDK・Rokid SDK経路を使う開発者 |
+| [Guide illustré en français](docs/rokid-memory-skills.fr.md) | Développeurs qui intègrent le SDK AIUI ou la voie Rokid SDK / EverMe |
 | [API 与响应状态](skills/aiui-everos-direct/references/api-v2.md) | 实现 EverOS v2 调用与回执处理 |
 | [OAuth 与远程 MCP](skills/rokid-sdk-everme/references/oauth-mcp.md) | 实现 EverMe 发现、权限、token 生命周期与工具调用 |
 | [验证结果与复验脚本](docs/validation.md) | 核对 SDK 交付、类型、网络与官方 AIUI 宿主兼容性 |
 
-原有中英日 **18 张技术图**保留可编辑源图；新增概念插画用于说明使用方式。[技术图来源](docs/assets/blue-ink/README.md) · [概念图与生成记录](docs/assets/concepts/README.md)
+中、英、日、法共 **24 张技术图**保留可编辑源图；新增概念插画用于说明使用方式。[技术图来源](docs/assets/blue-ink/README.md) · [概念图与生成记录](docs/assets/concepts/README.md)
 
 ## 验证记录
 

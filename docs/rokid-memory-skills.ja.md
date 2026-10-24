@@ -1,6 +1,6 @@
 # Rokidアプリに長期記憶を組み込む
 
-[简体中文](rokid-memory-skills.md) · [English](rokid-memory-skills.en.md) · **日本語**
+[简体中文](rokid-memory-skills.md) · [English](rokid-memory-skills.en.md) · **日本語** · [Français](rokid-memory-skills.fr.md)
 
 <p>
   <img src="assets/brand/rokid-logo-black-on-white.svg" height="64" alt="Rokid標準ロゴ" />
@@ -264,7 +264,7 @@ SDKは、リポジトリのルートで`node --test skills/aiui-everos-direct/sc
   <img src="assets/brand/fun-pizza-logo.jpg" alt="FUN PIZZAの企業ブランドロゴ" width="128" />
 </p>
 
-**製品と運営会社：**运动大师（Sport Master）は、<strong>上海方披萨软件科技有限公司 / Shanghai Fun Pizza Software Technology Co., Ltd.</strong>が運営しています。以下ではAIUI Sportの公開ソースを使い、記憶機能の組み込み箇所を説明します。
+<strong>製品と運営会社：</strong>运动大师（Sport Master）は、<strong>上海方披萨软件科技有限公司 / Shanghai Fun Pizza Software Technology Co., Ltd.</strong>が運営しています。以下ではAIUI Sportの公開ソースを使い、記憶機能の組み込み箇所を説明します。
 
 [EasonのAIUI-Sports-Agents](https://github.com/EasonZhu1997/AIUI-Sports-Agents)では、ランニング、サイクリング、ローイング向けのAIUIアプリを公開しています。ランニングアプリの既存の記憶インターフェースを、SDKの組み込み箇所を検討する具体例として参照できます。
 

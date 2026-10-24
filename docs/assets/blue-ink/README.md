@@ -1,6 +1,6 @@
 # Blue-ink illustrations
 
-18 localized figures, six each in Chinese, English and Japanese, were redrawn using the built-in ImageGen tool and the blue-ink-paper-diagram workflow on 2026-10-24.
+24 localized figures, six each in Chinese, English, Japanese and French, were redrawn using the built-in ImageGen tool and the blue-ink-paper-diagram workflow. The first three language sets were generated on 2026-10-24; the French set was added in a later documentation revision.
 
 The final visual contract is black pen doodles, blue handwritten labels and arrows, sparse yellow accents, and a warm-white background filling the canvas. There is **no desk, dark outer frame, visible sheet edge, curled corner, or photographic cast shadow**. The same default has been added to the maintained [blue-ink Skill](https://github.com/EasonZhu1997/Eason-Agent-Skills/tree/main/skills/blue-ink-paper-diagram).
 
