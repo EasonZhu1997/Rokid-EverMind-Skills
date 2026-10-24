@@ -255,7 +255,17 @@ Rokid SDK 调用示例：
 
 从仓库根目录运行 `node --test skills/aiui-everos-direct/scripts/*.test.mjs` 可检查 SDK。这是离线测试，不是眼镜接入成功证据。三种语言说明使用同一组 Skill 标识与共享技术参考。
 
-## 6. 公开案例：AIUI Sport
+<a id="sport-master-case"></a>
+
+## 6. 产品案例：运动大师 / Sport Master · AIUI Sport
+
+<p>
+  <img src="assets/brand/sport-master-logo.jpg" alt="运动大师 / Sport Master 产品标识" width="96" />
+  &nbsp;&nbsp;
+  <img src="assets/brand/fun-pizza-logo.jpg" alt="FUN PIZZA 公司品牌标识" width="128" />
+</p>
+
+**产品案例与运营方：**运动大师（Sport Master）由<strong>上海方披萨软件科技有限公司 / Shanghai Fun Pizza Software Technology Co., Ltd.</strong>运营。下方以 AIUI Sport 的公开源码说明记忆接入位置。
 
 作者公开的源码案例 [AIUI-Sports-Agents](https://github.com/EasonZhu1997/AIUI-Sports-Agents) 提供跑步、骑行和室内划船三套 AIUI 应用。以跑步应用为例，可以从它已有的记忆接口边界理解 SDK 的接入位置：
 

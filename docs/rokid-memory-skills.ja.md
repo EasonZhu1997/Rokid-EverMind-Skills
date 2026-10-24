@@ -254,7 +254,17 @@ Skillディレクトリだけをコピーした場合は、プロンプト内の
 
 SDKは、リポジトリのルートで`node --test skills/aiui-everos-direct/scripts/*.test.mjs`を実行して確認できます。これはオフラインテストであり、グラス上の連携が動くことの証明ではありません。[検証履歴](validation.md)も参照してください。
 
-## 6. 参考プロジェクト：AIUI Sport
+<a id="sport-master-case"></a>
+
+## 6. 製品事例：运动大师 / Sport Master · AIUI Sport
+
+<p>
+  <img src="assets/brand/sport-master-logo.jpg" alt="Sport Masterの製品ロゴ" width="96" />
+  &nbsp;&nbsp;
+  <img src="assets/brand/fun-pizza-logo.jpg" alt="FUN PIZZAの企業ブランドロゴ" width="128" />
+</p>
+
+**製品と運営会社：**运动大师（Sport Master）は、<strong>上海方披萨软件科技有限公司 / Shanghai Fun Pizza Software Technology Co., Ltd.</strong>が運営しています。以下ではAIUI Sportの公開ソースを使い、記憶機能の組み込み箇所を説明します。
 
 [EasonのAIUI-Sports-Agents](https://github.com/EasonZhu1997/AIUI-Sports-Agents)では、ランニング、サイクリング、ローイング向けのAIUIアプリを公開しています。ランニングアプリの既存の記憶インターフェースを、SDKの組み込み箇所を検討する具体例として参照できます。
 

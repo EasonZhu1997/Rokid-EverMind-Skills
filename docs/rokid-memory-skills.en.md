@@ -253,7 +253,17 @@ If you copied only a skill folder, supply this guide's GitHub URL instead of the
 
 The SDK can be checked from the repository root with `node --test skills/aiui-everos-direct/scripts/*.test.mjs`. These are offline tests, not proof of a working glasses integration. See [validation history](validation.md).
 
-## 6. Reference project: AIUI Sport
+<a id="sport-master-case"></a>
+
+## 6. Product example: 运动大师 / Sport Master · AIUI Sport
+
+<p>
+  <img src="assets/brand/sport-master-logo.jpg" alt="Sport Master product logo" width="96" />
+  &nbsp;&nbsp;
+  <img src="assets/brand/fun-pizza-logo.jpg" alt="FUN PIZZA company brand logo" width="128" />
+</p>
+
+**Product and operator:** Sport Master (运动大师) is operated by <strong>Shanghai Fun Pizza Software Technology Co., Ltd. / 上海方披萨软件科技有限公司</strong>. The public AIUI Sport source below illustrates where memory integration fits.
 
 [Eason's AIUI-Sports-Agents](https://github.com/EasonZhu1997/AIUI-Sports-Agents) provides public Run, Bike and Rower source projects. Use the running app's existing memory boundary as a concrete place to understand SDK integration:
 
