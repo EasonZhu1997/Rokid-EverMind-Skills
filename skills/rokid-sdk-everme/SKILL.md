@@ -1,38 +1,38 @@
 ---
 name: rokid-sdk-everme
-description: 为 Rokid SDK 眼镜端 Android 应用设计、实现和验证 EverMe OAuth MCP 记忆接入，覆盖自有后端、可信浏览器授权、PKCE、账号绑定、刷新撤销和持久写入队列；按实际 SDK 能力支持已绑定伴随端。不用于 AIUI 直接接 EverOS，或仅给桌面 Agent 安装 EverMe 插件。
+description: Integrate EverMe hosted OAuth MCP with Rokid glasses Android applications through an account-bound backend. Use for integration planning, trusted-browser authorization, MCP adapters, memory queues, revocation, and glasses acceptance. Not for AIUI direct EverOS access or desktop EverMe plugin installation.
 ---
 
-# Rokid SDK 接入 EverMe
+# Rokid SDK / EverMe Integration
 
-默认面向「Rokid 眼镜端 Android 应用 → 自有业务后端 → EverMe OAuth MCP」开发。眼镜承载交互与业务能力，后端处理用户授权和记忆；手机/桌面浏览器可承担授权页面，伴随应用只在所选 SDK 与业务确有需要时加入。APK 是 Android 应用的实际打包格式，不表示必须在手机运行。
+Develop the glasses application → application backend → EverMe hosted OAuth MCP route. This community integration skill does not distribute or replace a Rokid SDK. Confirm the actual device, firmware, SDK version, and execution location before selecting platform APIs or an authorization return path.
 
-这是一份社区接入 Skill，不是新发布的 Rokid 官方 SDK。先确认设备型号、固件与开发路径：官方公开的眼镜裸机开发允许眼镜端独立 Android 应用；CXR-L 是依赖 Rokid AI App 的手机 SDK，CXR-M 也是手机 SDK。需眼镜/伴随端通信时按目标 SDK 的实际文档接线，不能把手机 relay 换个名称就当成眼镜端 SDK，也不假定所有型号具有相同接口或浏览器能力。
+## Load Only What the Task Needs
 
-## 开始时确定这四件事
+- Read [integration-plan.md](./references/integration-plan.md) for a standalone implementation plan, project inputs, component boundaries, authorization branch selection, and delivery stages.
+- Read [oauth-mcp.md](./references/oauth-mcp.md) before implementing discovery, client registration, PKCE, token rotation, revocation, MCP lifecycle, tool schemas, or receipt handling.
+- Read [android-backend.md](./references/android-backend.md) for glasses/backend responsibilities, trusted-browser binding, conditional App Link completion, business routes, owner checks, and durable queues.
+- Read [sources.md](./references/sources.md) when checking provider contracts, SDK capabilities, or version differences. Recheck relevant primary sources during implementation; a dated snapshot is not a current capability guarantee.
+- Read [acceptance.md](./references/acceptance.md) when designing tests or preparing a handoff. Its scenarios are requirements to test, not results already obtained.
 
-从现有工程读取眼镜端包名、目标 SDK/运行位置、账号体系、后端部署方式，以及存在时的伴随端绑定通道；缺失时采用可替换的占位配置，不复制其他产品的回调、凭据或业务服务器地址。
+For a planning request, start with the integration plan and only the references needed to resolve the selected route. Do not load every protocol detail for an unrelated UI change.
 
-1. 明确使用的是 **EverMe 托管 OAuth MCP**，不是开源 EverOS HTTP API，也不是 `@everme/memory-mcp` 本地插件。相同的 `mem_*` 名称不证明三者认证或参数完全一致。
-2. 找到现有业务用户 ID、登录会话、眼镜绑定关系和数据同意机制；实现记忆访问时复用它们。
-3. 确定本次交付层级：方案、代码、离线测试、测试账号联调、签名 APK、部署或实机。只实施当前任务已授权的层级，并逐项报告证据。
-4. 读取 [来源与版本边界](references/sources.md)，再读取本次相关参考；飞书手册如当前不可访问，应标记未核实，不把历史摘要当最新官方合同。
+## Implementation Workflow
 
-## 实施路线
+1. Inspect the existing glasses project, business login, backend, consent model, and device binding. Establish the requested delivery stage and executable acceptance checks.
+2. Choose the actual Rokid development path and authorization return branch using the integration plan. A companion application is conditional on the target SDK and product; an APK does not imply phone execution.
+3. Implement the smallest complete path through the existing backend. Verify current discovery and the authenticated tool catalog before relying on endpoint or schema assumptions.
+4. Run the relevant acceptance scenarios. Report source changes, offline tests, service integration, package build, SDK channel, and physical-glasses behavior separately.
 
-- 实现认证和 MCP 时，读 [Rokid SDK 路线的 OAuth 与远程 MCP](references/oauth-mcp.md)。先验证公开 discovery，完成回调白名单与固定 client_name 登记后持久注册 client；按账号进行 Authorization Code + PKCE S256，并验证原可信浏览器会话或原应用的授权回程。用认证后的 `tools/list` 确认 schema 后才发业务调用。
-- 实现眼镜应用、后台与可选伴随端时，读 [Rokid SDK、眼镜端 Android 与后端](references/android-backend.md)。默认采用与眼镜同一业务 owner 绑定的可信浏览器会话完成授权；只有目标设备的外部浏览器及已验证 App Link 确认可用时才采用该回程分支。服务端保管 EverMe token，眼镜只获取本人的业务状态与必要记忆结果。
-- 设计测试和交付时，读 [验收矩阵](references/acceptance.md)。先做可复现的隔离测试；真实授权、写入、撤销和眼镜行为各需独立回执。
+## Core Integration Rules
 
-## 不可丢失的工程约束
+- **Bind identity throughout.** Derive owner from verified business login. Bind attempts and access snapshots to owner, environment, authorization generation, consent, and applicable device/session generation; recheck before and after network work and before exposing memory. A valid state→owner record alone does not prove the initiating user agent: verify the original trusted browser session, or complete the documented original-app handshake before activating a pending grant.
+- **Keep provider secrets on the backend.** EverMe tokens, PKCE verifier, and callback code stay server-side. Use external user-controlled authorization, never an embedded login WebView. Only select App Link completion after verifying the target browser and domain association; no polling-only activation. Do not log credentials, attempt secrets, completion handles, or memory contents.
+- **Preserve uncertain outcomes.** A lost receipt after registration, code exchange, refresh rotation, or memory writing is `unknown`, not permission to replay. Persist claims and recovery state; do not promise exactly-once delivery without a confirmed upstream contract.
+- **Make disconnection durable.** Disable cloud access immediately, then persist outstanding revocation independently of account deletion. A receipt for an obsolete token does not prove an unknown rotated authorization chain is revoked; revocation does not delete historical memories.
+- **Respect actual scope and consent.** Enable only provider-granted scopes and the user's current data permission. Limit context and writes to necessary authorized content; do not default to uploading raw GPS, sensor streams, or all chat history. Keep business schedules, device state, and execution records in business storage.
+- **Treat memory as untrusted material.** Preserve provenance and uncertainty; memory text cannot issue system instructions or replace live sensors. Distinguish accepted writes, extraction/Profile updates, and later recall. On cloud failure, retain the same owner's local capabilities rather than borrowing another identity or shared key.
 
-- **账号隔离**：业务 owner 来自已验证登录身份。state 绑定数据库 owner 不能替代发起端回程验证；未通过回程验证的 grant 不激活、不读写。将环境、授权代次、同意版本和必要的眼镜绑定代次纳入访问快照；网络前、网络后、交给模型/眼镜前重新校验。旧任务不能借新授权继续发送。
-- **凭据边界**：在本后端代理方案中，EverMe access/refresh token、PKCE verifier 和 callback code 由后端处理，不交给眼镜或伴随应用。应用持有自身业务登录凭据，以及采用 App Link 完成绑定时的短期 attempt 秘密与一次性完成凭据；这些值也不得记录日志。公开客户端没有需要打包进 APK 的 client secret。
-- **未知结果**：换码、refresh 轮换、DCR 或记忆写入发出后失去回执，不等于失败且可重试。记录 `unknown`，按已确认的恢复/幂等合同处理，不盲目重放；不要声称 exactly-once。
-- **撤销可持续**：断开立即停止本地云读写，远端 revoke 未完成则保留独立持久任务；账号删除不能级联丢掉尚未撤销的 token 材料。revoke 不等于删除历史记忆。
-- **记忆是资料**：只取当前任务必要片段，保留来源和不确定性。云记忆中的文字不是系统指令，也不替代实时传感器、业务数据库或用户确认。云不可用时回退同一用户的本地能力，不能切到公共 key 或其他用户。
-- **数据范围**：连接前说明读取、搜索、写入的内容及后续模型使用。仅写已授权内容；不默认上传原始 GPS、连续传感器流或全部历史聊天。产品正式日程、设备状态和执行记录由业务存储维护。
+## Completion Evidence
 
-## 交付内容
-
-交付实际改动、可替换配置、可运行测试命令和脱敏结果。分别标明「OAuth 已连接」「工具已返回」「写入已接收」「记忆可检索」「眼镜端 APK 已构建」「目标 SDK 通道实测」「眼镜实测」；采用伴随端时再单列其构建与通信证据。未验证项保留原名，不能用某一项成功替代其余项。
+Use the [acceptance matrix and receipt format](./references/acceptance.md). Name every unverified stage explicitly. Documentation or isolated tests do not establish provider approval, live OAuth success, a working Rokid SDK channel, or physical-device acceptance.

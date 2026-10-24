@@ -213,6 +213,8 @@ flowchart TB
 
 ## 5. 自分のプロジェクトで使う
 
+接続手順は独立してインストールできるディレクトリに分かれています：[Skill接続センター](../skills/README.md) · [AIUIの導入と接続](../skills/aiui-everos-direct/README.md) · [Rokid SDKの導入と接続](../skills/rokid-sdk-everme/README.md)。各ディレクトリに短い入口、実装計画、参考資料が含まれます。この図解ガイドは必要に応じて参照してください。
+
 ```sh
 git clone https://github.com/EasonZhu1997/Rokid-EverMind-Skills.git
 ```
@@ -224,7 +226,7 @@ AIUIでは、まず`skills/aiui-everos-direct/sdk/`全体をプロジェクト�
 
 ```text
 $aiui-everos-directを使い、私のAIUIプロジェクトにEverOSの記憶機能を追加してください。
-docs/rokid-memory-skills.ja.mdを読み、日本語で回答してください。
+このSkill内のreferences/integration-plan.mdを読み、日本語で回答してください。
 現在のホストAPIを調査し、Cloudと自己ホスト版v2のどちらを使うか確認してください。
 APKを中継せず、検索 → 回答 → 許可された内容の保存までの小さなループを実装してください。
 同梱のJavaScript SDKを再利用し、アプリ固有の接続部分だけを実装してください。
@@ -236,7 +238,7 @@ APKを中継せず、検索 → 回答 → 許可された内容の保存まで�
 
 ```text
 $rokid-sdk-evermeを使い、Rokid SDKグラスアプリにEverMeを追加してください。対象SDKと認可ブラウザーの能力を先に確認してください。
-docs/rokid-memory-skills.ja.mdを読み、日本語で回答してください。
+このSkill内のreferences/integration-plan.mdを読み、日本語で回答してください。
 既存のログインとバックエンドを再利用してください。
 コールバックURLとclient_nameの事前登録を確認し、PKCE付きブラウザー認可と、
 認可結果が開始元のアプリに対応することの検証を実装してください。
@@ -244,7 +246,7 @@ MCPツールを確認し、トークン更新・接続解除・アカウント�
 ローカル実装とテストを先に完了し、実サービスの検証結果は分けて報告してください。
 ```
 
-Skillディレクトリだけをコピーした場合は、プロンプト内の`docs/`パスを、このガイドのGitHub URLに置き換えてください。
+完全なSkillディレクトリがあれば、このプロンプトを使えます。図解ガイド全体を読む必要はありません。
 
 | 段階 | 確認する証拠 |
 | --- | --- |

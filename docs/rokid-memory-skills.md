@@ -216,6 +216,8 @@ flowchart TB
 
 ## 5. 取得与使用
 
+接入方案现已独立为可安装目录：[Skill 接入中心](../skills/README.md) · [AIUI 安装与接入](../skills/aiui-everos-direct/README.md) · [Rokid SDK 安装与接入](../skills/rokid-sdk-everme/README.md)。每个目录内含短入口、独立实施计划和参考文件；图文指南可按需阅读。
+
 ```sh
 git clone https://github.com/EasonZhu1997/Rokid-EverMind-Skills.git
 ```
@@ -253,7 +255,7 @@ Rokid SDK 调用示例：
 | 获准的服务联调 | 正确账号、实际权限、后端回执，以及不携带原聊天上下文的新会话召回 |
 | 应用与眼镜联调 | 明确 AIX/APK 构建、固件/型号、语音与显示观察 |
 
-从仓库根目录运行 `node --test skills/aiui-everos-direct/scripts/*.test.mjs` 可检查 SDK。这是离线测试，不是眼镜接入成功证据。三种语言说明使用同一组 Skill 标识与共享技术参考。
+从仓库根目录运行 `node --test skills/aiui-everos-direct/scripts/*.test.mjs` 可检查 SDK。这是离线测试，不是眼镜接入成功证据。四种语言说明使用同一组 Skill 标识与共享技术参考。
 
 <a id="sport-master-case"></a>
 

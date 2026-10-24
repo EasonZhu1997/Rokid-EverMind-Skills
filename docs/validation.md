@@ -1,5 +1,28 @@
 # SDK and integration validation
 
+## Standalone Skill packaging — 2026-10-25
+
+The integration instructions are separately installable from the [Skill center](../skills/README.md). This is a documentation/package update; all five SDK `0.1.0` files are byte-for-byte unchanged, and the original SDK release is retained.
+
+| Check | Observed result |
+| --- | --- |
+| Official structure review | Pinned AIUI `aiui-dev` at `362fcb7299a44637c19ed7be0e192beb74ebbabf`; short entrypoints route to task-specific references |
+| Standalone references | 45 local links stay inside their respective Skill folders; no missing resources |
+| Actual project installation | Skills CLI `1.7.4`, Node `24.14.0`, local source path, `-a codex --copy -y`; both Skills installed into an isolated project's `.agents/skills/` with exact file matches and no symlinks |
+| Installed package checks | Both Skill validators passed; all 30 existing AIUI SDK tests passed from the installed directory |
+| Complete ZIP contents | AIUI: 17 files; Rokid: 9 files. Safe top-level folders, CRC and each extracted file matched final source bytes |
+
+The public GitHub tree-URL discovery command reached Git clone but timed out after 45 seconds in this environment. It was not counted as an installation pass. The install pages also provide fixed full-ZIP URLs that avoid Git clone; the [dated Skill release](https://github.com/EasonZhu1997/Rokid-EverMind-Skills/releases/tag/skills-2026.10.25) carries the archives, `SHA256SUMS`, a per-file manifest and publication checks. SDK version and Skill package date are independent.
+
+| Skill archive | SHA-256 |
+| --- | --- |
+| `aiui-everos-direct.zip` | `e76de88d324a11ece65a2e6a7932b64e02eb577bb70f5449a6bc1570737962c8` |
+| `rokid-sdk-everme.zip` | `957621a7a42c3007bbe4cb299df6631e5fb28f7ff302c92a96e3fc4b0a1012da` |
+
+These checks establish development-Skill installation and bundled SDK consistency. They do not execute EverMe authorization, write real memory, build a new glasses application or validate a physical device. The SDK runtime acceptance below remains dated to its actual execution.
+
+## SDK runtime checks — 2026-10-24
+
 Validated on **2026-10-24**. The AIUI EverOS community SDK `0.1.0` passed the checks below. The Rokid SDK → EverMe Skill describes an integration design; these SDK checks do not validate that separate OAuth/MCP implementation or a physical Rokid SDK channel.
 
 | Check | Observed result | What it proves |

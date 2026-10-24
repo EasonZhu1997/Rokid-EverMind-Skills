@@ -9,7 +9,7 @@
 | EverOS Cloud v2 | AIUI → `https://api.evermind.ai/api/v2/memory/*` | Cloud 账号、API key、用户数据隔离、可达网络 |
 | EverOS 自建 v2 | AIUI → 自己的 HTTPS 入口 → EverOS | Python 服务、模型服务、持久化目录，以及入口认证/授权 |
 | 共享产品的无 APK 接入 | AIUI → 自有认证网关 → Cloud 或自建 EverOS | 网关按已认证主体固定用户与作用域；主 key 保留服务端 |
-| EverMe | OAuth + MCP，个人记忆账号授权 | 另用 APK/EverMe Skill；不能以 EverOS API key 代替用户 OAuth |
+| EverMe | OAuth + MCP，个人记忆账号授权 | 另用 Rokid SDK / EverMe Skill；不能以 EverOS API key 代替用户 OAuth |
 
 EverMind 是组织/生态名；当前官方仓库名称为 **EverOS**。不要将用户口语中的 Evermate、Evermind OS 自动当成有独立端点的产品。
 

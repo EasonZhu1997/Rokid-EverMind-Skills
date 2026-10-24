@@ -213,6 +213,8 @@ Ce sont des équivalences conceptuelles, **pas des formats de requête interchan
 
 ## 5. Essayer les Skills dans votre projet
 
+Les plans d’intégration sont désormais des répertoires autonomes à installer : [centre des Skills](../skills/README.md) · [installation et intégration AIUI](../skills/aiui-everos-direct/README.md) · [installation et intégration Rokid SDK](../skills/rokid-sdk-everme/README.md). Chacun contient un point d’entrée court, un plan de mise en œuvre et ses références. Ce guide illustré reste facultatif.
+
 ```sh
 git clone https://github.com/EasonZhu1997/Rokid-EverMind-Skills.git
 ```
@@ -223,7 +225,7 @@ Les développeurs AIUI doivent d’abord copier l’intégralité de `skills/aiu
 
 ```text
 Utilise $aiui-everos-direct pour ajouter la mémoire EverOS à mon projet AIUI.
-Lis docs/rokid-memory-skills.fr.md et réponds en français.
+Lis references/integration-plan.md dans ce Skill et réponds en français.
 Examine les API actuelles de l’hôte et confirme Cloud ou v2 auto-hébergé.
 Réalise une boucle rappel → réponse → enregistrement autorisé sans relais APK.
 Réutilise le SDK JavaScript fourni ; écris seulement le raccordement propre à l’application.
@@ -236,7 +238,7 @@ Exécute les vérifications locales pertinentes et liste les essais service/appa
 ```text
 Utilise $rokid-sdk-everme pour ajouter EverMe à mon application Rokid SDK sur les lunettes.
 Vérifie d’abord le SDK cible et les capacités du navigateur.
-Lis docs/rokid-memory-skills.fr.md et réponds en français.
+Lis references/integration-plan.md dans ce Skill et réponds en français.
 Réutilise la connexion de l’application et son backend. Vérifie l’enregistrement
 du callback et du client_name, réalise l’autorisation dans le navigateur avec PKCE
 et lie le retour à l’application d’origine. Découvre les outils MCP et traite
@@ -244,7 +246,7 @@ le renouvellement, la déconnexion et le changement de compte.
 Termine l’implémentation et les tests locaux ; présente séparément les essais réels.
 ```
 
-Si vous n’avez copié qu’un dossier de Skill, remplacez le chemin `docs/` dans la consigne par l’URL GitHub de ce guide.
+Ces consignes fonctionnent avec un dossier de Skill complet ; il n’est pas nécessaire de lire tout ce guide.
 
 | Étape | Éléments de preuve à recueillir |
 | --- | --- |

@@ -17,7 +17,7 @@ Reusable memory integration for glasses developers.
 [<img src="docs/assets/badges/guides.svg" height="22" alt="Chinese, English, Japanese and French guides" />](#图文文档)
 [<img src="docs/assets/badges/license.svg" height="22" alt="Original code and docs: MIT" />](LICENSE)
 
-[快速开始](#快速开始) · [运动大师案例](#运动大师案例) · [验证记录](#验证记录) · [维护方](#维护方)
+[Skill 接入中心](skills/README.md) · [快速开始](#快速开始) · [运动大师案例](#运动大师案例) · [验证记录](#验证记录) · [维护方](#维护方)
 
 **[简体中文](docs/rokid-memory-skills.md) · [English](docs/rokid-memory-skills.en.md) · [日本語](docs/rokid-memory-skills.ja.md) · [Français](docs/rokid-memory-skills.fr.md)**
 
@@ -94,7 +94,9 @@ Reusable memory integration for glasses developers.
 
 ### 1. 获取 SDK 或 Skill
 
-从 [Release 下载](https://github.com/EasonZhu1997/Rokid-EverMind-Skills/releases/tag/aiui-everos-sdk-v0.1.0)，或克隆仓库：
+**接入方案已按官方 AIUI Skill 的方式独立整理：[Skill 接入中心](skills/README.md) · [AIUI 安装与实施](skills/aiui-everos-direct/README.md) · [Rokid SDK 安装与实施](skills/rokid-sdk-everme/README.md)。** 每条路线可单独安装，助手从短 `SKILL.md` 按任务读取本目录参考；无需加载整个展示页。
+
+运行时代码见 [SDK v0.1.0](https://github.com/EasonZhu1997/Rokid-EverMind-Skills/releases/tag/aiui-everos-sdk-v0.1.0)；更新后的完整 Skill 包见 [skills-2026.10.25](https://github.com/EasonZhu1997/Rokid-EverMind-Skills/releases/tag/skills-2026.10.25)。也可克隆仓库：
 
 ```sh
 git clone https://github.com/EasonZhu1997/Rokid-EverMind-Skills.git

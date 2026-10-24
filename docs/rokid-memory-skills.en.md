@@ -213,6 +213,8 @@ These are conceptual counterparts, **not interchangeable payloads**. Discover Ev
 
 ## 5. Try the skills in your project
 
+The integration plans are now standalone installable directories: [Skill integration center](../skills/README.md) · [AIUI setup and integration](../skills/aiui-everos-direct/README.md) · [Rokid SDK setup and integration](../skills/rokid-sdk-everme/README.md). Each contains a short entrypoint, an implementation plan and its references. This illustrated guide is optional.
+
 ```sh
 git clone https://github.com/EasonZhu1997/Rokid-EverMind-Skills.git
 ```
@@ -224,7 +226,7 @@ AIUI developers should first copy the complete `skills/aiui-everos-direct/sdk/` 
 
 ```text
 Use $aiui-everos-direct to add EverOS memory to my AIUI project.
-Read docs/rokid-memory-skills.en.md and respond in English.
+Read this Skill's references/integration-plan.md and respond in English.
 Inspect the current host APIs and confirm Cloud or self-hosted v2.
 Implement one recall → reply → permitted save loop without an APK relay.
 Reuse the bundled JavaScript SDK; write only the app-specific wiring.
@@ -236,14 +238,14 @@ Run the relevant local checks and list remaining service/device tests.
 
 ```text
 Use $rokid-sdk-everme to add EverMe to my Rokid SDK glasses app. Check the target SDK and browser capabilities first.
-Read docs/rokid-memory-skills.en.md and respond in English.
+Read this Skill's references/integration-plan.md and respond in English.
 Reuse the app's login and backend. Check callback/client-name onboarding,
 implement browser authorization with PKCE and initiating-app return binding,
 discover MCP tools, and handle refresh, disconnect and account switching.
 Complete local implementation and tests first; report live checks separately.
 ```
 
-If you copied only a skill folder, supply this guide's GitHub URL instead of the `docs/` path in the prompt.
+These prompts work with a complete Skill folder; reading this whole guide is not a prerequisite.
 
 | Milestone | Evidence to collect |
 | --- | --- |
